@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dublin_pub_tracker/static/css/main.c45d1963.css",
+    "main.js": "/dublin_pub_tracker/static/js/main.214d101a.js",
+    "static/js/787.89d44e08.chunk.js": "/dublin_pub_tracker/static/js/787.89d44e08.chunk.js",
+    "index.html": "/dublin_pub_tracker/index.html",
+    "main.c45d1963.css.map": "/dublin_pub_tracker/static/css/main.c45d1963.css.map",
+    "main.214d101a.js.map": "/dublin_pub_tracker/static/js/main.214d101a.js.map",
+    "787.89d44e08.chunk.js.map": "/dublin_pub_tracker/static/js/787.89d44e08.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c45d1963.css",
+    "static/js/main.214d101a.js"
+  ]
+}
