@@ -1,23 +1,17 @@
+/* Existing Styles */
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-
-
-
-
 .App-link {
   color: #61dafb;
 }
-
-
-/* CSS for table header cells */
+table {
+  font-size: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 .thStyle {
+  font-size: 14px;
   border: 1px solid #ccc;
   background-color: #4A90E2;
   color: white;
@@ -25,10 +19,28 @@
   text-align: left;
   font-weight: bold;
 }
-
-/* CSS for table data cells */
 .tdStyle {
+  font-size: 12px;
   border: 1px solid #ccc;
   padding: 4px 5px;
   text-align: left;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .App {
+    /* Adjust the container's padding and text size for smaller screens */
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  table {
+    /* Ensure the table fits the screen width */
+    width: 100%;
+    font-size: 10px; /* Smaller font for smaller screens */
+  }
+
+  .thStyle, .tdStyle {
+    padding: 2px 5px; /* Reduce padding for table cells */
+  }
 }
