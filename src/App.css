@@ -1,4 +1,28 @@
 /* Existing Styles */
+/* App.css */
+.button {
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  padding: 10px 20px; /* Padding for the button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Add pointer cursor on hover */
+  text-decoration: none; /* Remove underlines for links */
+  font-size: 16px; /* Font size */
+  margin-right: 10px; /* Margin between buttons */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.button.return {
+  background-color: #dc3545; /* Red background color for return button */
+}
+
+.button.return:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
 .App {
   text-align: center;
 }
@@ -43,4 +67,17 @@ table {
   .thStyle, .tdStyle {
     padding: 2px 5px; /* Reduce padding for table cells */
   }
+}
+
+
+.google-form-container {
+  width: 100%;
+  max-width: 700px; 
+  margin: auto;
+  padding: 15px;
+}
+
+.google-form-container iframe {
+width: 100%;
+border: none; 
 }
