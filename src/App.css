@@ -10,6 +10,7 @@
   text-decoration: none; /* Remove underlines for links */
   font-size: 16px; /* Font size */
   margin-right: 10px; /* Margin between buttons */
+  margin-left: 20px;
 }
 
 .button:hover {
