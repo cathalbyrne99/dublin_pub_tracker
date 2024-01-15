@@ -7,10 +7,38 @@ const GoogleSheetsTable = () => {
   const [uniqueValues, setUniqueValues] = useState({}); // Store unique values for each column
   const [loading, setLoading] = useState(true);
   const [filters, setFilters] = useState({});
+  // Count of Pubs and Submissions
+  const [numOfPubs, setNumOfPubs] = useState(0);
+  const [numOfSubmissions, setNumOfSubmissions] = useState(0);
+  const cathalsTable = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTyr_AtTh0JhgJSjN8zjvDeKnHVB7viIUHoKSzCHATSzpSZ4ECaPLGAToUFhOGORMIkDmyoEqO-5waO/pub?gid=1574508462&single=true&output=csv'
 
   useEffect(() => {
+    fetchNumbers();
     fetchData();
   }, []);
+
+  const fetchNumbers = async () => {
+    try {
+      const response = await axios.get(cathalsTable);
+
+      // Parse the CSV data
+      // Cathal TODO: Clean the fuck out of this bit once it's working
+      const rows = response.data.split('\n');
+      const row1 = rows[0].split(','); // Assuming the CSV has a single row of values
+      const row2 = rows[1].split(','); // Assuming the CSV has a single row of values
+
+
+      // Extracting values from cells K1 and K2
+      const pubsValue = row1[10]; // Assuming K1 is the 11th column (zero-based index)
+      const submissionsValue = row2[10]; // Assuming K2 is the 12th column (zero-based index)
+
+      setNumOfPubs(pubsValue);
+      setNumOfSubmissions(submissionsValue);
+    } catch (error) {
+      console.error('Error fetching numbers:', error);
+    }
+  };
+
 
   const fetchData = async () => {
     try {
@@ -61,6 +89,13 @@ const GoogleSheetsTable = () => {
 
   return (
     <div>
+      {/* Display the numbers above the table */}
+      <div>
+        <p style={{ marginLeft: '20px', marginRight: '20px' }}>Number of Pubs: {numOfPubs}</p>
+        <p style={{ marginLeft: '20px', marginRight: '20px' }}>Number of Submissions: {numOfSubmissions}</p>
+      </div>
+
+
       <table>
         <thead>
           {/* First row for column headers */}
