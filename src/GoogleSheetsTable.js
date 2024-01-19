@@ -94,11 +94,11 @@ const GoogleSheetsTable = () => {
   return (
     <div>
       {/* Display the numbers above the table */}
-      <div>
+      {/*<div>
         <p style={{ marginLeft: '20px', marginRight: '20px' }}>Count of Pubs: {numOfPubs}</p>
         <p style={{ marginLeft: '20px', marginRight: '20px' }}>Total Submissions: {numOfTotalSubmissions}</p>
         <p style={{ marginLeft: '20px', marginRight: '20px' }}>Total Submissions to be Approved: {numOfToBeApprovedSubmissions}</p>
-      </div>
+  </div> */}
 
 
       <table>
